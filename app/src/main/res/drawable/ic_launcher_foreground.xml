@@ -7,28 +7,15 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Main store bag container in crisp white -->
+    <!-- Center solid circle -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M37,42 C34.79,42 33,43.79 33,46 L33,76 C33,78.21 34.79,80 37,80 L71,80 C73.21,80 75,78.21 75,76 L75,46 C75,43.79 73.21,42 71,42 Z" />
+        android:pathData="M54,42 A12,12 0 1,0 54,66 A12,12 0 1,0 54,42 Z" />
 
-    <!-- Bag handle -->
+    <!-- Outer concentric ring -->
     <path
         android:fillColor="#00000000"
         android:strokeColor="#FFFFFF"
-        android:strokeWidth="4"
-        android:strokeLineCap="round"
-        android:strokeLineJoin="round"
-        android:pathData="M44,42 C44,34 64,34 64,42" />
-
-    <!-- LineageOS iconic triple connected node emblem centered in the bag -->
-    <group
-        android:scaleX="0.10"
-        android:scaleY="0.10"
-        android:translateX="34.2"
-        android:translateY="49.0">
-        <path
-            android:fillColor="#167C80"
-            android:pathData="M318,108a29.92,29.92 0,0 0,-23.33 11.15l-1.13,-0.45A221.45,221.45 0,0 0,258 108.11L258,108a60,60 0,0 0,-120 0v0.1l-1.28,0.28a219.65,219.65 0,0 0,-34.26 10.32l-1.13,0.45a30,30 0,1 0,5.54 10.71h0a208,208 0,0 1,32.32 -9.73,60 60,0 0,0 117.55,0 207.47,207.47 0,0 1,32.34 9.72h0A30,30 0,1 0,318 108ZM78,156a18,18 0,1 1,18 -18A18,18 0,0 1,78 156ZM198,156a48,48 0,1 1,48 -48A48.05,48.05 0,0 1,198 156ZM318,156a18,18 0,1 1,18 -18A18,18 0,0 1,318 156ZM222,108a24,24 0,1 1,-24 -24A24,24 0,0 1,222 108Z" />
-    </group>
+        android:strokeWidth="7"
+        android:pathData="M54,27 A27,27 0 1,0 54,81 A27,27 0 1,0 54,27 Z" />
 </vector>
