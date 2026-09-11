@@ -19,10 +19,10 @@ Forked from [GrapheneOS AppStore](https://github.com/GrapheneOS/AppStore), this 
 
 ## Features
 
-- 🎨 **Material 3 Design:** Complete Material You dynamic theming, monochrome themed icon support, and fluid animations.
-- 🔒 **Cryptographic Security:** Repository metadata is authenticated using Ed25519 public key signatures (`signify`).
-- ⚡ **Seamless Updates:** Automatic background check and one-tap unattended installation.
-- 📦 **Independent Ecosystem:** Host and distribute your own applications, browsers, and service packages.
+- **Material 3 Design:** Complete Material You dynamic theming, monochrome themed icon support, and fluid animations.
+- **Cryptographic Security:** Repository metadata is authenticated using Ed25519 public key signatures (`signify`).
+- **Seamless Updates:** Automatic background check and one-tap unattended installation.
+- **Independent Ecosystem:** Host and distribute your own applications, browsers, and service packages.
 
 ## Available Applications
 
