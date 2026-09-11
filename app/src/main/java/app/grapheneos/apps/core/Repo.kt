@@ -324,6 +324,7 @@ class RPackage(val common: RPackageContainer, val versionCode: Long, val abis: A
         val hashes = json.getJSONArray("apkHashes")
         val sizes = json.getJSONArray("apkSizes")
         val gzSizes = json.getJSONArray("apkGzSizes")
+        val urls = json.optJSONArray("apkUrls")
 
         val len = names.length()
         require(hashes.length() == len)
@@ -336,7 +337,8 @@ class RPackage(val common: RPackageContainer, val versionCode: Long, val abis: A
             val name = names.getString(i)
             val sha256 = hexStringToByteArray(hashes.getString(i))
             require(sha256.size == (256 / 8))
-            val apk = Apk(this, name, sha256, sizes.getLong(i), gzSizes.getLong(i))
+            val customUrl = urls?.optString(i)?.takeIf { it.isNotEmpty() }
+            val apk = Apk(this, name, sha256, sizes.getLong(i), gzSizes.getLong(i), customUrl)
             if (apk.type == Apk.Type.ABI && apk.qualifier != deviceAbi.apkSplitQualifier) {
                 continue
             }
@@ -479,6 +481,7 @@ class Apk(
     val sha256: ByteArray,
     val size: Long,
     val compressedSize: Long,
+    val customUrl: String? = null,
 ) {
     var qualifier = ""
 
@@ -501,7 +504,7 @@ class Apk(
         }
     }
 
-    fun downloadUrl() = "$REPO_BASE_URL/packages/${pkg.manifestPackageName}/${pkg.versionCode}/$name.gz"
+    fun downloadUrl() = customUrl ?: "$REPO_BASE_URL/packages/${pkg.manifestPackageName}/${pkg.versionCode}/$name.gz"
 
     enum class Type {
         UNCONDITIONAL,

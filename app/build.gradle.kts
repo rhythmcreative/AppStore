@@ -17,7 +17,7 @@ plugins {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
@@ -50,7 +50,7 @@ android {
             "\"${System.getenv("REPO_BASE_URL") ?: "https://rhythmcreative.github.io/apps-repository"}\"")
 
         buildConfigField(String::class.java.name, "REPO_PUBLIC_KEY", "\"${
-            System.getenv("REPO_PUBLIC_KEY") ?: "RWQevdGSdsZc6yuJKy+CnCqhHTqqyjGTDsgtAxWzrCBGpROXDJEe6Znz"
+            System.getenv("REPO_PUBLIC_KEY") ?: "RWTTSdtDfoJa5NeBxnMiPzWn32nZb1TPEOagvDuNccD7o0Du7T5leb9K"
         }\"")
 
         buildConfigField(String::class.java.name, "REPO_KEY_VERSION",
